@@ -14,7 +14,7 @@ import AppContainer from '../AppContainer/AppContainer';
 
 
 class LoginContainer extends Component {
-  simpleAction = (event) => {
+  handleLoginClick = () => {
     this.props.simpleAction();
   }
 
@@ -22,11 +22,17 @@ class LoginContainer extends Component {
     return (
       <AppContainer>
         <h2>Login Page</h2>
-        <button onClick={this.simpleAction}>Test redux action</button>
         <div>
-          {
-            JSON.stringify(this.props)
-          }
+          <label htmlFor="username">
+            <b>Username</b>
+            <input type="text" placeholder="Luke Skywalker" name="username" required />
+          </label>
+
+          <label htmlFor="password">
+            <b>Password</b>
+            <input type="password" placeholder="*******" name="password" required />
+          </label>
+          <button onClick={this.handleLoginClick} type="button">Login</button>
         </div>
       </AppContainer>
     );

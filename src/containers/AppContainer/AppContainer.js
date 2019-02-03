@@ -1,20 +1,18 @@
+// Import React Dependencies
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
+// Import Components
 import { Link } from 'react-router-dom';
+
+import AppHeader from '../../components/AppHeader/AppHeader';
 
 
 class AppContainer extends Component {
   render() {
     return (
       <div>
-        <h1>AppContainer</h1>
-        <div>
-          <Link to="/">Dashboard</Link>
-          <span>&nbsp;|&nbsp;</span>
-          <Link to="/login">Login</Link>
-          <span>&nbsp;|&nbsp;</span>
-          <Link to="/search">Search</Link>
-        </div>
+        <AppHeader />
         {this.props.children}
       </div>
     );

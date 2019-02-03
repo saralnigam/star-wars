@@ -1,0 +1,7 @@
+.app-header {
+  align-items: center;
+  background: #333;
+  display: grid;
+  grid-template-columns: 10em 1fr 10em;
+  padding: 0 1em;
+}
