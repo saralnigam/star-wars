@@ -1,0 +1,13 @@
+.card {
+  box-shadow: 0 0px 2px 1px #1111112b;
+  padding: 1em 2em;
+  margin-bottom: 1.5em;
+}
+
+.name {
+
+}
+
+.population-scale {
+  width: 100%
+}

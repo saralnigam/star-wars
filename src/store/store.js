@@ -8,7 +8,7 @@ import rootReducer from '../reducers/rootReducer';
 const createAppStore = compose(
   applyMiddleware(thunk),
   // TODO: Remove DevTool Config in prod config for store
-  window.devToolsExtension ? window.devToolsExtension() : f => f,
+  window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f,
 )(createStore);
 
 export default function configureStore(initialState) {

@@ -1,0 +1,16 @@
+.login-form {
+    margin: 0 30em;
+}
+
+.form-label {
+    margin-bottom: .5em;
+}
+
+.form-input {
+    margin-bottom: 1.5em;
+    width: 100%;
+}
+
+.button-row {
+    text-align: center;
+}

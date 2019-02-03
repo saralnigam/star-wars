@@ -5,6 +5,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import AuthenticatedRoute from '../../components/AuthenticatedRoute/AuthenticatedRoute';
+import DashboardContainer from '../DashboardContainer/DashboardContainer';
 import LoginContainer from '../LoginContainer/LoginContainer';
 import SearchContainer from '../SearchContainer/SearchContainer';
 
@@ -12,7 +13,7 @@ import SearchContainer from '../SearchContainer/SearchContainer';
 const AppRouter = () => (
   <Router>
     <Switch>
-      <Route exact path="/" component={LoginContainer} />
+      <AuthenticatedRoute exact path="/" component={DashboardContainer} />
       <Route path="/login" component={LoginContainer} />
       <AuthenticatedRoute path="/search" component={SearchContainer} />
     </Switch>

@@ -7,20 +7,20 @@ import { Link } from 'react-router-dom';
 
 import AppHeader from '../../components/AppHeader/AppHeader';
 
+import styles from './AppContainer.module.css';
 
-class AppContainer extends Component {
-  render() {
-    return (
-      <div>
-        <AppHeader />
-        {this.props.children}
-      </div>
-    );
-  }
-}
+const AppContainer = ({ location, children }) => (
+  <div>
+    <AppHeader location={location} />
+    <div className={styles.content}>
+      {children}
+    </div>
+  </div>
+);
 
 AppContainer.propTypes = {
-
+  location: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default AppContainer;

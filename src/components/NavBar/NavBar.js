@@ -10,24 +10,24 @@ import ROUTES from '../../constants/routes';
 import styles from './NavBar.module.css';
 
 
-const NavBar = () => (
+const NavBar = ({ activePath }) => (
   <nav>
     <ul className={styles['nav-list-container']}>
       <li>
-        <Link className={`${styles['nav-link']} ${styles.active}`} to={ROUTES.DASHBOARD}>Dashboard</Link>
+        <Link className={`${styles['nav-link']} ${ROUTES.DASHBOARD === activePath ? styles.active : ''}`} to={ROUTES.DASHBOARD}>Dashboard</Link>
       </li>
       <li>
-        <Link className={styles['nav-link']} to={ROUTES.LOGIN}>Login</Link>
+        <Link className={`${styles['nav-link']} ${ROUTES.LOGIN === activePath ? styles.active : ''}`} to={ROUTES.LOGIN}>Login</Link>
       </li>
       <li>
-        <Link className={styles['nav-link']} to={ROUTES.SEARCH}>Search</Link>
+        <Link className={`${styles['nav-link']} ${ROUTES.SEARCH === activePath ? styles.active : ''}`} to={ROUTES.SEARCH}>Search</Link>
       </li>
     </ul>
   </nav>
 );
 
 NavBar.propTypes = {
-
+  activePath: PropTypes.string.isRequired,
 };
 
 export default NavBar;

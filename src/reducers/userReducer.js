@@ -10,8 +10,9 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case types.SIMPLE_ACTION:
+    case types.LOGIN_SUCCESSFUL:
       return {
+        ...action.data.user,
         isAuthenticated: !state.isAuthenticated,
       };
 
