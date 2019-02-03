@@ -50,7 +50,11 @@ class SearchContainer extends Component {
 
     return (
       <div>
-        {filteredPlanets.map(planet => <PlanetCard planet={planet} />)}
+        {
+          filteredPlanets.length > 0
+            ? filteredPlanets.map(planet => <PlanetCard planet={planet} />)
+            : <p>Loading Planets...</p>
+          }
       </div>
     );
   }

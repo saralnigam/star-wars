@@ -17,10 +17,10 @@ const NavBar = ({ activePath }) => (
         <Link className={`${styles['nav-link']} ${ROUTES.DASHBOARD === activePath ? styles.active : ''}`} to={ROUTES.DASHBOARD}>Dashboard</Link>
       </li>
       <li>
-        <Link className={`${styles['nav-link']} ${ROUTES.LOGIN === activePath ? styles.active : ''}`} to={ROUTES.LOGIN}>Login</Link>
+        <Link className={`${styles['nav-link']} ${ROUTES.SEARCH === activePath ? styles.active : ''}`} to={ROUTES.SEARCH}>Search</Link>
       </li>
       <li>
-        <Link className={`${styles['nav-link']} ${ROUTES.SEARCH === activePath ? styles.active : ''}`} to={ROUTES.SEARCH}>Search</Link>
+        <Link className={`${styles['nav-link']} ${ROUTES.LOGIN === activePath ? styles.active : ''}`} to={ROUTES.LOGIN}>Login</Link>
       </li>
     </ul>
   </nav>
