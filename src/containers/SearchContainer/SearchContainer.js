@@ -40,6 +40,7 @@ class SearchContainer extends Component {
 
   renderPlanetCards = () => {
     const { planets } = this.props;
+    const {searchText} = this.state;
 
     let filteredPlanets = [];
     if (this.state.searchText === '') {
@@ -51,9 +52,17 @@ class SearchContainer extends Component {
     return (
       <div>
         {
-          filteredPlanets.length > 0
-            ? filteredPlanets.map(planet => <PlanetCard planet={planet} />)
-            : <p>Loading Planets...</p>
+          planets.length === 0 
+          ?
+          <p>Loading Planets...</p>
+          :
+          (
+            filteredPlanets.length > 0 
+            ? 
+            filteredPlanets.map(planet => <PlanetCard planet={planet} key={extractIdFromUrl(planet.url)} />)
+            :
+            <p>No Planets Found with name {searchText}</p>
+          )
           }
       </div>
     );
@@ -95,6 +104,7 @@ SearchContainer.propTypes = {
     getPlanets: PropTypes.func,
   }).isRequired,
   location: PropTypes.object.isRequired,
+  planets: PropTypes.array.isRequired,
 };
 
 

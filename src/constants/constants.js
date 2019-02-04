@@ -9,4 +9,3 @@ export const API_URLS = {
   GET_PEOPLE: 'https://swapi.co/api/people/',
   GET_PLANETS: 'https://swapi.co/api/planets/',
 };
-

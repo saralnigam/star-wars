@@ -1,13 +1,12 @@
 // Import React Dependencies
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 // Import Components
-import { Link } from 'react-router-dom';
-
 import AppHeader from '../../components/AppHeader/AppHeader';
 
 import styles from './AppContainer.module.css';
+
 
 const AppContainer = ({ location, children }) => (
   <div>

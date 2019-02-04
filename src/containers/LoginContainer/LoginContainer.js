@@ -35,7 +35,7 @@ class LoginContainer extends Component {
     };
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate() {
     const { history, user } = this.props;
 
     // Redirect to dashboard if user is logged in
